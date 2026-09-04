@@ -15,9 +15,8 @@ namespace Student_Performance_App
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
-//всем привет1
-//всем привет
-//vsem privet1
+// 123
