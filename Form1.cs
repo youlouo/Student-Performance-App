@@ -7,7 +7,7 @@ namespace Student_Performance_App
         public Form1()
         {
             InitializeComponent();
-
+            //ya ebal
         }
 
         private void exit_button_Click(object sender, System.EventArgs e)
