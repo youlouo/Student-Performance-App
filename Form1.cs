@@ -41,6 +41,10 @@ namespace Student_Performance_App
         {
             this.Close();
         }
-        
+
+        private void Button_click_minimaized(object sender, System.EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
