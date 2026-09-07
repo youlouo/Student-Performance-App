@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Student_Performance_App
 {
@@ -14,5 +15,6 @@ namespace Student_Performance_App
         {
             this.Close();
         }
+        
     }
 }
