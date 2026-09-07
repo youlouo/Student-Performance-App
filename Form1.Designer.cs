@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.mini_button = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel4);
@@ -216,6 +219,17 @@
             this.mini_button.UseVisualStyleBackColor = false;
             this.mini_button.Click += new System.EventHandler(this.Button_click_minimaized);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(49, 391);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.Is_checked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,9 +241,10 @@
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Student Performance App";
+            this.Text = "Student Perfomance App";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -257,6 +272,7 @@
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button mini_button;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

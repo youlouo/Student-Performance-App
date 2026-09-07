@@ -46,5 +46,10 @@ namespace Student_Performance_App
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        private void Is_checked(object sender, System.EventArgs e)
+        {
+            if (this.checkBox1.Checked == true) this.textBox2.PasswordChar = '\0';
+            else this.textBox2.PasswordChar = '●';
+        }
     }
 }
