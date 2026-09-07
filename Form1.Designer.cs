@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.mini_button = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.button1);
@@ -66,6 +68,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 652);
             this.panel1.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(45, 386);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(157, 24);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.Text = "Показать пароль";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.Is_checked);
             // 
             // panel6
             // 
@@ -82,7 +96,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(45, 414);
+            this.button1.Location = new System.Drawing.Point(45, 461);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(339, 43);
             this.button1.TabIndex = 6;
@@ -219,16 +233,17 @@
             this.mini_button.UseVisualStyleBackColor = false;
             this.mini_button.Click += new System.EventHandler(this.Button_click_minimaized);
             // 
-            // checkBox1
+            // label5
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(49, 391);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.Is_checked);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(127, 623);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Developed by Doooo";
             // 
             // Form1
             // 
@@ -273,6 +288,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button mini_button;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
