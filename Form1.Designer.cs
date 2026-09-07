@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
+            this.mini_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,6 +197,24 @@
             this.exit_button.UseVisualStyleBackColor = false;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
+            // mini_button
+            // 
+            this.mini_button.BackColor = System.Drawing.Color.Transparent;
+            this.mini_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.mini_button.FlatAppearance.BorderSize = 0;
+            this.mini_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mini_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mini_button.ForeColor = System.Drawing.Color.Transparent;
+            this.mini_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.mini_button.Location = new System.Drawing.Point(835, 2);
+            this.mini_button.Margin = new System.Windows.Forms.Padding(0);
+            this.mini_button.Name = "mini_button";
+            this.mini_button.Size = new System.Drawing.Size(55, 39);
+            this.mini_button.TabIndex = 3;
+            this.mini_button.Text = "—";
+            this.mini_button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.mini_button.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +222,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::Student_Performance_App.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.mini_button);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -235,6 +255,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button mini_button;
     }
 }
 
