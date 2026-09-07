@@ -189,7 +189,7 @@
             this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit_button.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit_button.ForeColor = System.Drawing.Color.White;
-            this.exit_button.Location = new System.Drawing.Point(893, 12);
+            this.exit_button.Location = new System.Drawing.Point(906, -1);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(45, 29);
             this.exit_button.TabIndex = 2;
@@ -206,14 +206,15 @@
             this.mini_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mini_button.ForeColor = System.Drawing.Color.Transparent;
             this.mini_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.mini_button.Location = new System.Drawing.Point(835, 2);
+            this.mini_button.Location = new System.Drawing.Point(861, -11);
             this.mini_button.Margin = new System.Windows.Forms.Padding(0);
             this.mini_button.Name = "mini_button";
-            this.mini_button.Size = new System.Drawing.Size(55, 39);
+            this.mini_button.Size = new System.Drawing.Size(45, 39);
             this.mini_button.TabIndex = 3;
             this.mini_button.Text = "—";
             this.mini_button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mini_button.UseVisualStyleBackColor = false;
+            this.mini_button.Click += new System.EventHandler(this.Button_click_minimaized);
             // 
             // Form1
             // 
