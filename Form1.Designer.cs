@@ -88,7 +88,7 @@
             this.checkBox1.Location = new System.Drawing.Point(45, 386);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(157, 24);
-            this.checkBox1.TabIndex = 8;
+            this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Показать пароль";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.Is_checked);
@@ -105,6 +105,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Orchid;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Enabled = false;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -114,6 +115,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Войти";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Log_in_click);
             // 
             // panel4
             // 
@@ -140,6 +142,7 @@
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(339, 33);
             this.textBox2.TabIndex = 0;
+            this.textBox2.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // panel2
             // 
@@ -165,6 +168,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(339, 33);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.Text_Change);
             // 
             // label4
             // 

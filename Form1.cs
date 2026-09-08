@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Student_Performance_App
@@ -17,6 +18,19 @@ namespace Student_Performance_App
             this.MouseMove += Form1_MouseMove;
             this.MouseUp += Form1_MouseUp;
         }
+        //Обновляем доступ к кнопке при вводе текста
+        private void Text_Change(object sender, System.EventArgs e)
+        {
+            Check_Fields();
+        }
+        //Проверка на пустоту ввода данных
+        private void Check_Fields()
+        {
+            bool usernameValid = !string.IsNullOrWhiteSpace(textBox1.Text);
+            bool passwordValid = !string.IsNullOrWhiteSpace(textBox2.Text);
+            button1.Enabled = usernameValid && passwordValid;
+        }
+        //Обработка переноса формы
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
@@ -24,7 +38,6 @@ namespace Student_Performance_App
             dragFormPoint = this.Location;
         }
 
-        //Обработка переноса формы
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
@@ -55,10 +68,32 @@ namespace Student_Performance_App
             if (this.checkBox1.Checked == true) this.textBox2.PasswordChar = '\0';
             else this.textBox2.PasswordChar = '●';
         }
+        //Обработка входа
         private void Log_in_click(object sender, System.EventArgs e)
         {
             string username = this.textBox1.Text.Trim();
             string password = this.textBox2.Text.Trim();
+            string Role = Authenticate_User(username, password);
+            if (Role != null)
+            {
+                this.Hide();
+                MainForm mainForm = new MainForm(Role);
+                mainForm.FormClosed += (s, args) => this.Close();
+                mainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Неверное имя пользователя или пароль!", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //Обрабатка логина и пароля
+        private string Authenticate_User(string username, string password)
+        {
+            if (username == "admin" && password == "admin") return "admin";
+            if (username == "decan" && password == "decan") return "decan";
+            if (username == "teacher" && password == "teacher") return "teacher";
+            if (username == "student" && password == "student") return "student";
+            else return null;
         }
     }
 }
