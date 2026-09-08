@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.mini_button = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +68,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 652);
             this.panel1.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label5.Location = new System.Drawing.Point(127, 623);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Developed by Doooo";
             // 
             // checkBox1
             // 
@@ -232,18 +244,6 @@
             this.mini_button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.mini_button.UseVisualStyleBackColor = false;
             this.mini_button.Click += new System.EventHandler(this.Button_click_minimaized);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(127, 623);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 19);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Developed by Doooo";
             // 
             // Form1
             // 
