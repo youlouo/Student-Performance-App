@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using Npgsql;
+using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -89,11 +91,43 @@ namespace Student_Performance_App
         //Обрабатка логина и пароля
         private string Authenticate_User(string username, string password)
         {
-            if (username == "admin" && password == "admin") return "admin";
-            if (username == "decan" && password == "decan") return "decan";
-            if (username == "teacher" && password == "teacher") return "teacher";
-            if (username == "student" && password == "student") return "student";
-            else return null;
+            // Укажите ваши данные подключения к БД
+            string connString = "Host=localhost;Database=universitySPA;Username=postgres;Password=12345678";
+
+            // SQL-запрос с JOIN таблиц ПОЛЬЗОВАТЕЛИ и РОЛИ
+            string sql = @"
+        SELECT r.""Название"" 
+        FROM ""ПОЛЬЗОВАТЕЛИ"" u
+        JOIN ""РОЛИ"" r ON u.""id_роли"" = r.""id_роли""
+        WHERE u.""ник"" = @username AND u.""пароль"" = @password";
+
+            try
+            {
+                using (var conn = new NpgsqlConnection(connString))
+                {
+                    conn.Open();
+
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Защита от SQL-инъекций через параметры
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            return result.ToString(); // Возвращает название роли (например: "admin")
+                        }
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show($"Ошибка подключения к базе данных:\n{ex.Message}", "Ошибка СУБД", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null;
         }
     }
 }
